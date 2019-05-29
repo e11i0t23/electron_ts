@@ -37,7 +37,7 @@
     "appId": "com.qmk.configurator",
     "mac": {
       "category": "Utilty",
-      "target": ["default", "zip"]
+      "target": ["default"]
     },
     "linux": {
       "target": [
