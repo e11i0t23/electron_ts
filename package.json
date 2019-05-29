@@ -1,0 +1,51 @@
+{
+  "name": "qmk_configurator_electron_ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && electron ./app/main.js",
+    "doc": "jsdoc -r ./app/ -d ./doc/",
+    "postinstall": "install-app-deps",	
+    "dist": "tsc && electron-builder --publish onTagOrDraft"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0",
+    "jsdoc": "^3.6.2",
+    "electron-builder": "^20.41.0"
+  },
+  "keywords": [
+    "Electron",
+    "typescript"
+  ],
+  "dependencies": {
+    "follow-redirects": "^1.7.0",
+    "temp": "^0.9.0",
+    "usb": "^1.6.0"
+  },
+  "build": {
+    "directories": {"output": "release"	},
+    "appId": "com.qmk.configurator",
+    "mac": {
+      "category": "utilty"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "icon": "build/icon.ico"
+    },
+    "files": [
+      "app/",
+      "package.json"
+    ]
+  }
+}
