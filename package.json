@@ -1,6 +1,6 @@
 {
   "name": "qmk_configurator_electron_ts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "app/main.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "postinstall": "install-app-deps",
     "dist": "tsc --project ./tsconfig.json && electron-builder --publish onTagOrDraft"
   },
-  "author": "",
+  "author": "ELliot Powell",
+  "repository": "https://github.com/e11i0t23/electron_ts",
   "license": "ISC",
   "devDependencies": {
     "electron": "^5.0.2",
