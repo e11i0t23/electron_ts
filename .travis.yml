@@ -18,3 +18,16 @@ addons:
     packages:
     - libusb-1.0-0-dev
     - libudev-dev
+deploy:
+  provider: releases
+  api_key: GH_TOKEN
+  file:
+  - "./release/*.zip"
+  - "./release/*.dmg"
+  - "./release/*.AppImage"
+  - "./release/*.deb"
+  - "./release/*.tar.xz"
+  skip_cleanup: true
+  draft: true
+  on:
+    tags: true
