@@ -8,7 +8,7 @@
     "start": "tsc && electron ./app/main.js",
     "doc": "jsdoc -r ./app/ -d ./doc/",
     "postinstall": "install-app-deps",
-    "dist": "tsc --project ./tsconfig.json && electron-builder --publish onTagOrDraft"
+    "dist": "tsc --project ./tsconfig.json && electron-builder --publish always"
   },
   "author": "ELliot Powell",
   "repository": "https://github.com/e11i0t23/electron_ts",
