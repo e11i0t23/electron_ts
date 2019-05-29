@@ -8,9 +8,9 @@
     "start": "tsc && electron ./app/main.js",
     "doc": "jsdoc -r ./app/ -d ./doc/",
     "postinstall": "electron-builder install-app-deps",
-    "dist": "tsc --project ./tsconfig.json && electron-builder --publish always"
+    "dist": "tsc --project ./tsconfig.json && electron-builder --publish onTagOrDraft"
   },
-  "author": "ELliot Powell",
+  "author": {"name":"ELliot Powell", "email": "johnp8727@gmail.com"},
   "repository": "https://github.com/e11i0t23/electron_ts",
   "license": "ISC",
   "devDependencies": {
@@ -36,16 +36,19 @@
     },
     "appId": "com.qmk.configurator",
     "mac": {
-      "category": "utilty"
+      "category": "Utilty",
+      "target": ["default", "zip"]
     },
     "linux": {
       "target": [
         "AppImage",
-        "deb"
+        "deb",
+        "tar.xz"
       ]
     },
     "win": {
-      "icon": "build/icon.ico"
+      "icon": "build/icon.ico",
+      "target": ["portable","nsis","zip"]
     },
     "files": [
       "app/",
