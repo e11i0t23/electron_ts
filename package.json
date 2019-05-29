@@ -7,17 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && electron ./app/main.js",
     "doc": "jsdoc -r ./app/ -d ./doc/",
-    "postinstall": "install-app-deps",	
-    "dist": "tsc && electron-builder --publish onTagOrDraft"
+    "postinstall": "install-app-deps",
+    "dist": "tsc --project ./tsconfig.json && electron-builder --publish onTagOrDraft"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^5.0.2",
+    "electron-builder": "^20.41.0",
     "eslint": "^5.16.0",
     "eslint-config-google": "^0.13.0",
     "jsdoc": "^3.6.2",
-    "electron-builder": "^20.41.0"
+    "typescript": "^3.4.5"
   },
   "keywords": [
     "Electron",
@@ -29,7 +30,9 @@
     "usb": "^1.6.0"
   },
   "build": {
-    "directories": {"output": "release"	},
+    "directories": {
+      "output": "release"
+    },
     "appId": "com.qmk.configurator",
     "mac": {
       "category": "utilty"
