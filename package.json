@@ -10,16 +10,20 @@
     "postinstall": "electron-builder install-app-deps",
     "dist": "tsc --project ./tsconfig.json && electron-builder --publish onTagOrDraft"
   },
-  "author": {"name":"ELliot Powell", "email": "johnp8727@gmail.com"},
+  "author": {
+    "name": "ELliot Powell",
+    "email": "johnp8727@gmail.com"
+  },
   "repository": "https://github.com/e11i0t23/electron_ts",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^5.0.2",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "electron": "^4.2.4",
     "electron-builder": "^20.41.0",
     "eslint": "^5.16.0",
     "eslint-config-google": "^0.13.0",
-    "jsdoc": "^3.6.2",
-    "typescript": "^3.4.5"
+    "jsdoc": "^3.6.2"
   },
   "keywords": [
     "Electron",
@@ -37,7 +41,14 @@
     "appId": "com.qmk.configurator",
     "mac": {
       "category": "Utilty",
+<<<<<<< HEAD
       "target": ["default"]
+=======
+      "target": [
+        "default",
+        "zip"
+      ]
+>>>>>>> Rewrite
     },
     "linux": {
       "target": [
@@ -48,7 +59,11 @@
     },
     "win": {
       "icon": "build/icon.ico",
-      "target": ["portable","nsis","zip"]
+      "target": [
+        "portable",
+        "nsis",
+        "zip"
+      ]
     },
     "files": [
       "app/",
